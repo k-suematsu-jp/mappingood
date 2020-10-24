@@ -1,0 +1,176 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="top_img_area">
+    <h2 class="kongetuno_itimai">今月の一枚</h2>
+    <!-- ここのリンク先も手動で変更 -->
+    <a href="/picture/1"><img src="/static/img/{{top_img[1]}}" class="top_img1"></a>
+    <!-- <div class="top_img_name">投稿者：{{top_img[0]}}</div> -->
+    <div class="top_comment">コメント：{{top_img[2]}}</div>
+</div>
+
+<h2>最新投稿</h2>
+<div class="container_img">
+    <div class="item">
+        <a href="/picture/{{new_imgs[0][2]}}"><img src="/static/img/{{new_imgs[0][0]}}" alt="" class="top_img2"></a>
+        <p>{{new_imgs[0][1]}}</p>
+    </div>
+    <div class="item">
+        <a href="/picture/{{new_imgs[1][2]}}"><img src="/static/img/{{new_imgs[1][0]}}" alt="" class="top_img2"></a>
+        <p>{{new_imgs[1][1]}}</p>
+    </div> 
+    
+</div>
+    
+<div class="container_img">
+    <div class="item">
+        <a href="/picture/{{new_imgs[2][2]}}"><img src="/static/img/{{new_imgs[2][0]}}" alt="" class="top_img2"></a>
+        <p>{{new_imgs[2][1]}}</p>
+    </div>
+    <div class="item">
+        <a href="/picture/{{new_imgs[3][2]}}"><img src="/static/img/{{new_imgs[3][0]}}" alt="" class="top_img2"></a>
+        <p>{{new_imgs[3][1]}}</p>
+    </div>
+</div>
+
+<div class="junru_area">
+    <h2>ジャンル</h2>
+    <div class="junru">
+    
+        <div class="junru_button">
+            <button onclick="location.href='/junru/子育て'">子育て</button>
+        </div>
+        <div class="junru_button">
+            <button onclick="location.href='/junru/観光'">観光</button>
+        </div> 
+        <div class="junru_button">
+            <button onclick="location.href='/junru/買い物'">買い物</button>
+        </div> 
+        <div class="junru_button">
+            <button onclick="location.href='/junru/グルメ'">グルメ</button>
+        </div>
+        <div class="junru_button">
+            <button onclick="location.href='/junru/趣味'">趣味</button>
+        </div>
+        <div class="junru_button">
+            <button onclick="location.href='/junnru/フォトスポット'">フォトスポット</button>
+        </div>
+        <div class="junru_button">
+            <button onclick="location.href='/junru/その他'">その他</button>
+        </div>
+</div>
+</div>
+
+<div class="kouku_area">
+    <h2>校区</h2>
+    <div class="kouku">
+        <div class="kouku_button">
+            <button onclick="location.href='/kouku/代陽'">代陽</button>
+        </div>
+        <div class="kouku_button">
+            <button onclick="location.href='/kouku/八代'">八代</button>
+        </div> 
+        <div class="kouku_button">
+            <button onclick="location.href='/kouku/松高'">松高</button>
+        </div> 
+        <div class="kouku_button">
+            <button onclick="location.href='/kouku/八千把'">八千把</button>
+        </div>
+        <div class="kouku_button">
+            <button onclick="location.href='/kouku/松高'">松高</button>
+        </div>
+        <div class="kouku_button">
+            <button onclick="location.href='/kouku/太田郷'">太田郷</button>
+        </div>
+        <div class="kouku_button">
+            <button onclick="location.href='/kouku/植柳'">植柳</button>
+        </div>
+        <div class="kouku_button">
+            <button onclick="location.href='/kouku/麦島'">麦島</button>
+        </div>
+        <div class="kouku_button">
+            <button onclick="location.href='/kouku/高田'">高田</button>
+        </div>
+        <div class="kouku_button">
+            <button onclick="location.href='/kouku/金剛'">金剛</button>
+        </div>
+        <div class="kouku_button">
+            <button onclick="location.href='/kouku/郡築'">郡築</button>
+        </div>
+        <div class="kouku_button">
+            <button onclick="location.href='/kouku/昭和'">昭和</button>
+        </div>
+        <div class="kouku_button">
+            <button onclick="location.href='/kouku/宮地'">宮地</button>
+        </div>
+        <div class="kouku_button">
+            <button onclick="location.href='/kouku/龍峯'">龍峯</button>
+        </div>
+        <div class="kouku_button">
+            <button onclick="location.href='/kouku/日奈久'">日奈久</button>
+        </div>
+        <div class="kouku_button">
+            <button onclick="location.href='/kouku/二見'">二見</button>
+        </div>
+        <div class="kouku_button">
+            <button onclick="location.href='/kouku/坂本'">坂本</button>
+        </div>
+        <div class="kouku_button">
+            <button onclick="location.href='/kouku/千丁'">千丁</button>
+        </div>
+        <div class="kouku_button">
+            <button onclick="location.href='/kouku/鏡'">鏡</button>
+        </div>
+        <div class="kouku_button">
+            <button onclick="location.href='/kouku/東陽'">東陽</button>
+        </div>
+        <div class="kouku_button">
+            <button onclick="location.href='/kouku/泉'">泉</button>
+        </div>
+    </div>
+</div>
+
+<div class="kouku_ranking_area">
+    <div class="kouku_ranking_tittle">校区ランキング</div>
+    <table class="striped">
+        <thead>
+            <tr>
+                <th>順位</th>
+                <th>校区</th>
+                <th>校区ポイント</th>
+                </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>１位</td>
+            <td>{{site_point[0][0]}}</td>
+            <td>{{site_point[0][1]}}</td>
+          </tr>
+          <tr>
+            <td>２位</td>
+            <td>{{site_point[1][0]}}</td>
+            <td>{{site_point[1][1]}}</td>
+          </tr>
+          <tr>
+            <td>３位</td>
+            <td>{{site_point[2][0]}}</td>
+            <td>{{site_point[2][1]}}</td>
+          </tr>
+          <tr>
+            <td>４位</td>
+            <td>{{site_point[3][0]}}</td>
+            <td>{{site_point[3][1]}}</td>
+          </tr>
+          <tr>
+            <td>５位</td>
+            <td>{{site_point[4][0]}}</td>
+            <td>{{site_point[4][1]}}</td>
+          </tr>
+        </tbody>
+    </table>
+            
+
+
+
+</div>
+{% endblock %}

@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h4>{{ nickname }}さんのページ</h4>
+<button onclick="location.href='/edit'">アカウント情報の編集はこちら</button>
+
+<div class = "container">
+    <div class = "row">
+        <form action="/upload" method="post" enctype="multipart/form-data" class="col s6">
+            <div class = "row">
+                <h5>投稿写真を選択してください</h5><br>
+                <input type="file" name="upload"></br>
+                <div class = "input-field col s12">
+                    <p>タイトル</p>
+                    <input type="text" name="comment"><br>
+                </div>
+                <div class = "row">
+                <p>撮影写真の校区</p>
+                <select name="kouku" class = "browser-default">
+                    <option value="代陽">代陽</option>
+                    <option value="八代">八代</option>
+                    <option value="松高">松高</option>
+                    <option value="八千把">八千把</option>
+                    <option value="大田郷">太田郷</option>
+                    <option value="植柳">植柳</option>
+                    <option value="麦島">麦島</option>
+                    <option value="高田">高田</option>
+                    <option value="金剛">金剛</option>
+                    <option value="郡築">郡築</option>
+                    <option value="昭和">昭和</option>
+                    <option value="宮地">宮地</option>
+                    <option value="龍峯">竜峯</option>
+                    <option value="日奈久">日奈久</option>
+                    <option value="二見">二見</option>
+                    <option value="坂本">坂本</option>
+                    <option value="千丁">千丁</option>
+                    <option value="鏡">鏡</option>
+                    <option value="東陽">東陽</option>
+                    <option value="泉">泉</option>
+                    </select><br>
+                </div>
+                <p>撮影写真のジャンル</p>
+                <div>
+                <select name="junru" class = "browser-default">
+                    <option value="子育て">子育て</option>
+                    <option value="観光">観光</option>
+                    <option value="買い物">買い物</option>
+                    <option value="グルメ">グルメ</option>
+                    <option value="趣味">趣味</option>
+                    <option value="フォトスポット">フォトスポット</option>
+                    <option value="その他">その他</option>
+                    </select><br><br>
+                </div>
+                <input type="submit" value="画像アップロード" class="btn"></br>
+            </div>
+        </form>
+        <div class="col s6">
+            <p>撮影場所をマップ上で指定してください</p>
+            <a><img src="/static/img/map.jpg"></a>
+        </div>
+    </div>
+</div>
+
+{% for item in my_list %}
+<div class="container_brows_img">
+    <div>
+        <a href="/picture/{{item['picture_id']}}"><img src="/static/img/{{item['picture']}}" class="browsing_img"></a>
+    </div>
+    <div class="browsing_prf">
+        <!-- <div class="contributor">投稿者：{{item["user_id"]}}</div> -->
+        <div class="junru_name">ジャンル：{{item["junru_name"]}}</div>
+        <div class="kouku_name">校区：{{item["site_name"]}}</div>
+        <div class="contribut_time">投稿時間：{{item["time"]}}</div>
+        <div class="brows_comment">＜コメント＞<br>{{item["comment"]}}</div>
+        
+    </div>
+</div>
+{% endfor %}
+
+{% endblock %}
+

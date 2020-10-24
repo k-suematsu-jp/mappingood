@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="picturepage_name_kouku">投稿者：<a href="/personal_page/{{name[0][2]}}">{{name[0][0]}}</a>
+    　校区:<a href="/kouku/{{name[0][1]}}">{{name[0][1]}}</a>
+</div>
+<img src="/static/img/{{img_profile[0][3]}}" class="picturepage_picture">
+<div class="mappingood">マッピングッド数：{{img_profile[0][６]}}　ジャンル：<a href="/junru/{{img_profile[0][8]}}">{{img_profile[0][8]}}</a>
+    　撮影校区：<a href="/kouku/{{img_profile[0][7]}}">{{img_profile[0][7]}}</a>
+</div>
+<div class="picturepage_comment">＜コメント＞</br>{{img_profile[0][2]}}</div>
+
+{% endblock %}

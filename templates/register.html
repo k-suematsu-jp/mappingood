@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+<div class = "container">
+    <div class = "row">
+        <h4>ユーザー新規登録</h4>
+        <form action="/register" method="POST" class="col s6">
+            ユーザーID：<input type="text" name="name">
+            パスワード：<input type="password" name="password">
+            居住校区：
+            <select name="site_name" class = "browser-default">
+                <option value="代陽">代陽</option>
+                <option value="八代">八代</option>
+                <option value="松高">松高</option>
+                <option value="八千把">八千把</option>
+                <option value="大田郷">太田郷</option>
+                <option value="植柳">植柳</option>
+                <option value="麦島">麦島</option>
+                <option value="高田">高田</option>
+                <option value="金剛">金剛</option>
+                <option value="郡築">郡築</option>
+                <option value="昭和">昭和</option>
+                <option value="宮地">宮地</option>
+                <option value="龍峯">竜峯</option>
+                <option value="日奈久">日奈久</option>
+                <option value="二見">二見</option>
+                <option value="坂本">坂本</option>
+                <option value="千丁">千丁</option>
+                <option value="鏡">鏡</option>
+                <option value="東陽">東陽</option>
+                <option value="泉">泉</option>
+                </select><br>
+            ニックネーム：<input type="text" name="nickname">
+            <input type="submit" name="save" value="登録" class="btn">
+        </form>
+    </div>
+</div>
+
+{% endblock %}

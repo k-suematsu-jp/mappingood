@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="サイトをキーワードで説明">
+    <meta name="discription" content="どんなサイトかを短い文章で説明"> 
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=1">
+    <link rel="icon" href="favicon.ico">
+<!-- link -->
+<!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="../static/css/style_pc.css">
+
+<!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <title>マッピンGood八代</title>
+</head>
+<body>
+    <header>
+        <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper orange lighten-1">
+                <a href="/" class="brand-logo"><img src="static/img/mappingood_2.png" class="mappingood-logo"></a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <!-- <li><a href="sass.html">ジャンル▼</a></li>
+                    <li><a href="badges.html">校区▼</a></li> -->
+                    <li><a href="/">TOPページ</a></li>
+                    <li><a href="/login">ログイン</a></li>
+                    <li><a href="/user_page">マイページ</a></li>
+                    <li><a href="/logout">ログアウト</a></li>
+                </ul>
+
+            </div>
+        </nav>
+        </div>  
+    </header>
+    {% block content %}
+	{% endblock %}
+
+    <footer class="page-footer orange lighten-1">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">八代3rd　night course</h5>
+                    <p class="grey-text text-lighten-4">卒業製作　チーム　まっぴんぐっど</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">リンク</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="/">Top</a></li>
+                        <li><a class="grey-text text-lighten-3" href="/login">ログイン</a></li>
+                        <li><a class="grey-text text-lighten-3" href="/user_page">マイページ</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+            © 2020 Copyright
+            </div>
+        </div>
+    </footer>
+
+    
+</body>
+</html>

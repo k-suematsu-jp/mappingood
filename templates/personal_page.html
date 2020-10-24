@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+    <h3>{{profile[0][0]}}さんのページ</h3>
+    <div class="personalpage_profile">校区：<a href="/kouku/{{profile[0][1]}}">{{profile[0][1]}}</div></a>
+
+{% for item in brows_list %}
+<div class="container_brows_img">
+    <div>
+        <a href="/picture/{{item["picture_id"]}}"><img src="/static/img/{{item["picture"]}}" class="browsing_img"></a>
+    </div>
+    <div class="browsing_prf">
+        <div class="contributor">投稿者：{{item["user_id"]}}</div>
+        <div class="junru_name">ジャンル：{{item["junru_name"]}}</div>
+        <div class="kouku_name">校区：{{item["site_name"]}}</div>
+        <div class="contribut_time">投稿時間：{{item["time"]}}</div>
+        <div class="brows_comment">＜コメント＞<br>{{item["comment"]}}</div>
+        
+    </div>
+</div>
+{% endfor %}
+
+{% endblock %}

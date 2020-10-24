@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<div class = "container">
+    <div class = "row">
+        <h3>マイページへログイン</h3>
+        <form action="/login" method="POST" class="col s6">
+            ユーザーID：<input type="text" name="name">
+            パスワード：<input type="password" name="password">
+            <input type="submit" name="save" value="ログイン" class="btn">
+        </form>
+        <h6>ユーザーIDをお持ちでないですか？</h6>
+        <button class = "btn-large" onclick="location.href='/register'">新規登録はこちら</button>
+    </div>
+</div>
+{% endblock %}
